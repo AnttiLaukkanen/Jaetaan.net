@@ -1,0 +1,13 @@
+This is info, not code.
+
+This folder is image folder.
+There is no code or text here in the real server.
+
+This is where the cropped images goes when you add and ad in public lisaa_ilmoitus page or admin/add_ad.php page.
+These images show in the frot page's listing and as a thumb nails in ilmoitukset page.
+
+Here is also image named:
+
+oletuskuva_1234.jpg
+
+This is default image and will be shown in frontpage's listing only if there is no image in the ad. 
