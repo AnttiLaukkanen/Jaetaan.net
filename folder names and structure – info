@@ -1,0 +1,29 @@
+This is info, not code.
+
+There is no a file like this in the real server.
+
+This info is probably not necessary but it might be nice for someone to see 
+the whole folder stucture at one glance.
+To see that there is no other subfolders except the ones inside the kuvat folder.
+
+***
+
+folder names and structure:
+
+public
+
+  admin
+  ilmoitukset
+  includes
+  info
+  kuvat
+    – pienet_kuvat
+    – poistettavat_kuvat
+    – rajatut_kuvat
+  lisaa_ilmoitus
+  muokkaa_tai_poista
+  scheduled_codes
+  turvallisuustietoa
+  usein_kysytyt_kysymykset
+  yhteistyossa
+  yhteys 
