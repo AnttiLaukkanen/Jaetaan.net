@@ -1,0 +1,8 @@
+This is info, not code.
+
+This folder is image folder.
+There is no code or text here in the real server.
+
+This is where the original big images goes when you add and ad in public lisaa_ilmoitus page or admin/add_ad.php page.
+These images does not show anywhere in the site.
+This folder will be deleted automatically once everyday.
