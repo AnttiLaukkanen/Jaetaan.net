@@ -7,6 +7,8 @@ There is no a file like this in the real server.
 Create database and tables according to these instructions 
 so that it would be compatible with codes of Jaetaan.net pages.
 
+Jaetaan.net uses MySql database
+
 Database name: your database name
 
 Table 1 name: ilmoitukset
