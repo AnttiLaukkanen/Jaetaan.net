@@ -1,0 +1,7 @@
+This is info, not code.
+
+This folder is image folder.
+There is no code or text here in the real server.
+
+This is where the rezised images go when you add an ad in public lisaa_ilmoitus page or admin/add_ad.php page.
+From here they will be shown publicly.
