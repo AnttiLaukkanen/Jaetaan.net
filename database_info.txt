@@ -1,0 +1,122 @@
+This is info, not code.
+
+There is no a file like this in the real server.
+
+***
+
+Create database and tables according to these instructions 
+so that it would be compatible with codes of Jaetaan.net pages.
+
+Database name: your database name
+
+Table 1 name: ilmoitukset
+
+column names and info:
+
+1. id (int(10), auto increment, primary key,)
+2. ylaosasto (varchar(50))
+3. tapahtumaAlkaa (date)
+4. klo_I (time)
+5. tapahtumaPaattyy (date)
+6. klo_II (time)
+7. avoinna (text)
+8. paikka (varchar(255)
+9. tapahtumanOsoite (varchar(255))
+10. kaupunki (varchar(255))
+11. otskikko (varchar(255))
+12. sisalto (text)
+13. kuva1 (varchar(255))
+14. kuva2 (varchar(255))
+15. kuva3 (varchar(255))
+16. kuva4 (varchar(255))
+17. pieni_kuva_1 (varchar(255))
+18. pieni_kuva_2 (varchar(255))
+19. pieni_kuva3 (varchar(255))
+20. pieni_kuva_4 (varchar(255))
+21. nimi (varchar(255))
+22. jakaja (varchar(255))
+23. sahkoposti (varchar(255))
+24. puhelin (varchar(75))
+25. nettisivu (varchar(255))
+26. l_e_id (varchar(100))
+27. source (varchar(50))
+28. urlKokoIlmoitus (varchar(10))
+29. urlMuokkaaTaiPoista (varchar(30))
+30. ilmoitusPoistuuAutomaattisesti (date)
+31. julkaistu (varchar(5))
+32. pvm (timestamp, default: current_timestamp)
+
+
+Table 2 name: osastot
+
+column names and info:
+
+1. id (int(10), primary key, auto increment)
+2. elokuvat (varchar(50))
+3. improvisointi (varchar(50))
+4. keskustelu (varchar(50))
+5. kirjallisuus (varchar(50))
+6. kuvataide (varchar(50))
+7. kasityot (varchar(50))
+8. leikkiminen (varchar(50))
+9. liikunta (varchar(50))
+10. luento (varchar(50))
+11. musiikki (varchar(50))
+12. nayttelyt (varchar(50))
+13. oppiminen (varchar(50))
+14. pelaaminen (varchar(50))
+15. politiikka (varchar(50))
+16. runonlausunta (varchar(50))
+17. sadunkerronta (varchar(50))
+18. tanssi (varchar(50))
+19. tarinankerronta (varchar(50))
+20. teatteri (varchar(50))
+21. tyopaja (varchar(50))
+22. urheilu (varchar(50))
+23. uskonto (varchar(50))
+24. yhdessa_oleminen (varchar(50))
+25. muut_tapahtumat (varchar(50))
+26. aikuiset (varchar(50))
+27. lapset (varchar(50))
+28. nuoret (varchar(50))
+29. seniorit (varchar(50))
+30. miehet (varchar(50))
+31. naiset (varchar(50))
+
+32. elektroniikka (varchar(50))
+33. huonekalut (varchar(50))
+34. kodinkoneet (varchar(50))
+35. vaatteet (varchar(50))
+36. muut_annetaan_tavaroita(varchar(50))
+
+37. liikunta_2 (varchar(50))
+38. musiikki_2 (varchar(50))
+39. nayttelyt_2 (varchar(50))
+40. paikat (varchar(10))
+41. tilat (varchar(10))
+42. urheilu_2 (varchar(50))
+43. muut_annetaan_tekemista (varchar(50))
+
+44. elektroniikka_2 (varchar(50))
+45. huonekalut_2 (varchar(50))
+46. kodinkoneet_2 (varchar(50))
+47. vaatteet_2 (varchar(50))
+48. muut_pyydetaan_tavaroita (varchar(50))
+
+49. liikunta_3 (varchar(50))
+50. musiikki_3 (varchar(50))
+51. nayttelyt_3 (varchar(50))
+52. paikat_3 (varchar(10))
+53. tilat_3 (varchar(10))
+54. urheilu__3 (varchar(50))
+55. muut_pyydetaan_tekemista (varchar(50))
+
+
+Table 3 name: estetyt_l_e_tapahtumat
+
+column names and info: 
+
+id (int(10), primary key, auto increment)
+l_e_id (varchar(100))
+otsikko (varchar(255))
+added (timestamp, default: current_timestamp)
