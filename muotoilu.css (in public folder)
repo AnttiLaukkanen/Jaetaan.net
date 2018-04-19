@@ -1,0 +1,2989 @@
+/*
+---------------------------------------------------------------------------------------
+
+Kuinka löytää oikeat koodit tästä tiedostosta:
+
+
+Ensimmäisessä pääosassa ovat kaikille sivuille yhteiset muotoilut.
+Näitä ovat: 
+
+– * (kaikki)
+– header logo 
+– navigointipalkki 
+– footer.
+
+Toisessa pääosassa ovat sivujen keskisosien muotoilu seuraavassa järjestyksessä:
+
+– etusivu 
+– lisää ilmoitus ja muokkaa tai poista
+– koko ilmoitus
+– info, ukk, turvallisuustietoa, yhteistyössä ja yhteys
+
+Osien sisällä koodit ovat HTML-tagien mukaan aakkosjärjestyksessä. 
+
+Onnea matkaan ;-)
+
+--------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------
+
+Ensimmäinen pääosa alkaa.
+Kaikille sivuille yhteiset muotoilut:
+
+-------------------------------------------------------------------
+*/
+
+
+* {
+    box-sizing: border-box;
+    font-family: verdana, arial, "Trebuchet MS";
+    margin: 0;
+    padding: 0;  
+}
+
+a {
+    color: #27b6e4;
+}
+
+h1 {
+    font-size: 14px;
+}
+
+h2 {
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 11px;
+}
+
+li {
+    list-style-type: none;
+}
+
+li a {
+    font-size: 12px;
+}
+
+p {
+    font-size: 12px;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+a {
+    color: #27b6e4;
+}   
+
+body {
+/*
+    background-color: #e8f7fc;
+*/
+    background-attachment: fixed;
+    background-image: url("kuvat/kaivopuisto-helsinki.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 13px;
+}
+
+li a {
+    font-size: 13px;
+}
+
+p {
+    font-size: 13px;
+}
+
+}
+
+
+/*
+-------------------------------------
+
+Header logon muotoilu alkaa.
+
+-------------------------------------
+*/
+
+
+@media only screen and (min-width: 100px) {
+
+img#header_logo_I {
+    display: inline;
+    height: auto;
+    width: 100%;  
+}
+
+img#header_logo_II {
+    display: none;
+    height: auto;
+    width: 100%;  
+}
+
+img#header_logo_III {
+    display: none;
+    height: auto;
+    width: 100%;  
+}
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+img#header_logo_I {
+    display: none;
+    height: auto;
+    width: 100%;  
+}
+
+img#header_logo_II {
+    display: inline;
+    height: auto;
+    width: 100%;  
+}
+
+img#header_logo_III {
+    display: none;
+    height: auto;
+    width: 100%;  
+}
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+img#header_logo_I {
+    display: none;
+    height: auto;
+    width: 100%;  
+}
+
+img#header_logo_II {
+    display: none;
+    height: auto;
+    width: 100%;  
+}
+
+img#header_logo_III {
+    display: inline;
+    height: auto;
+    width: 100%;  
+}
+
+}
+
+
+/*
+-------------------------------------
+
+Header logon muotoilu loppuu.
+
+-------------------------------------
+
+
+-------------------------------------
+
+Navigaatiopalkin muotoilu alkaa.
+
+-------------------------------------
+*/
+
+
+br.br_katoaa {
+
+}
+
+div#navigointi {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li#lisaa_ilmoitus_lista {
+    background: #3c7809;
+    border-top: none;   
+    font-size: 16px;
+    float: left;
+    font-weight: bold;
+    list-style-type: none;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    padding: 20px 12px;
+    text-align: center;
+    width: 100%;
+}
+
+li#lisaa_ilmoitus_lista:hover {
+background: #71c516;
+}
+
+li#etusivu_lista {
+    background: #27b6e4;
+    border-bottom: none;
+    border-top: none; 
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    list-style-type: none;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    padding: 20px 12px;
+    text-align: center;
+    width: 100%;
+}
+
+li#etusivu_lista:hover {
+    background: #70d2ff;
+}
+
+ul a#lisaa_ilmoitus_linkki {
+    color: white;
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    text-decoration: none;
+    width: 50%;
+}
+
+ul a#etusivu_linkki {
+    color: white;   
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    text-decoration: none;
+    width: 50%;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+br.br_katoaa {
+    display: none;
+}
+
+li#lisaa_ilmoitus_lista {
+    background: #3c7809;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    list-style-type: none;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    padding: 24px 16px;
+    text-align: center;
+    width: 100%;
+}
+
+li#lisaa_ilmoitus_lista:hover {
+    background: #71c516;
+}
+
+li#etusivu_lista {
+    background: #27b6e4;
+    font-size: 16px;
+    font-weight: bold;
+    list-style-type: none;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    padding: 24px 16px; 
+    width: 100%;
+}
+
+li#etusivu_lista:hover {
+    background: #70d2ff;
+}
+
+ul a#lisaa_ilmoitus_linkki {
+    color: white;   
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    margin-right: 5%;
+    text-decoration: none;
+    width: 45%;
+}
+
+ul a#etusivu_linkki {
+    color: white;   
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    margin-left: 5%;
+    text-decoration: none;
+    width: 45%;
+}
+
+}
+
+
+/*
+-------------------------------------
+
+Navigaatiopalkin muotoilu loppuu.
+
+-------------------------------------
+
+
+-------------------------------------
+
+Footerin muotoilu alkaa.
+
+-------------------------------------
+*/
+
+
+div#footer_iso_naytto {
+   display: none;
+}
+
+div#footer_pieni_naytto {
+   display: block;
+   font-size: 13px;
+}
+
+li.footer_pieni_naytto_lista {
+    background: #07464e;
+    border-bottom: 1px solid rgb(10, 105, 117);
+    color: white;
+    display: inline-block;
+    font-weight: normal;
+    padding: 24px 16px;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+div#footer_iso_naytto {
+    background: #07464e;
+    clear: both;
+    display: block;
+    font-size: 15px;
+    height: auto;
+    text-align: center;
+    width: 100%;
+}
+
+div#footer_pieni_naytto {
+   display: none;
+}
+
+p.footer_iso_naytto_kappale {
+    display: inline-block;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;   
+    padding-top:  30px;
+}
+
+p a.footer_linkki {
+    color: white;
+    text-decoration: none;
+}
+
+}
+
+
+/*
+-------------------------------------
+
+Footerin muotoilu loppuu.
+
+-------------------------------------
+
+
+-------------------------------------------------------------------
+
+Ensimmäinen pääosa loppuu.
+
+-------------------------------------------------------------------
+
+
+-------------------------------------------------------------------
+
+Toinen pääosa alkaa.
+
+Sivujen keskiosien muotoilut:
+
+-------------------------------------------------------------------
+
+
+-------------------------------------
+
+Etusivun muotoilu alkaa.
+
+-------------------------------------
+*/
+
+div#haku_osastot_annetaan_apua {
+    display: none;
+}
+
+div#haku_osastot_annetaan_lainaan {
+    display: none;
+}
+
+div#haku_osastot_annetaan_ruokaa {
+    display: none;
+}
+
+div#haku_osastot_annetaan_tavaroita {
+    display: none;
+}
+
+div#haku_osastot_annetaan_tekemista {
+    display: none;
+}
+
+div#haku_osastot_muut_annetaan {
+    display: none;
+}
+
+div.haku_osastot_checkbox_I {
+    width: 100%; 
+}
+
+div.haku_osastot_checkbox_II {
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_III {
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IV {
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IV_II {
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_V {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_VI {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_VI {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_VII {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_VIII {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IX {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IX_II {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IX_III {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_X {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XI {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XII {
+    margin-bottom: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XIII {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XIV {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XIV_II {
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XIV_III {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XV {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+
+div#haku_osastot_pyydetaan_apua {
+    display: none;
+}
+
+div#haku_osastot_pyydetaan_lainaan {
+    display: none;
+}
+
+div#haku_osastot_pyydetaan_ruokaa {
+    display: none;
+}
+
+div#haku_osastot_pyydetaan_tavaroita {
+    display: none;
+}
+
+div#haku_osastot_pyydetaan_tekemista {
+    display: none;
+}
+
+div#haku_osastot_muut_pyydetaan {
+    display: none;
+}
+
+
+div#haku_osastot_tapahtumat {
+    display: none;
+    float: left;
+    width: 100%;
+}
+
+div.kaikki_checkboxit {
+    font-size: 13px;
+}
+
+div#pagination_lohko {
+    font-size: 13px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+input#hae_ilmoituksia_nappi {
+    background: #27b6e4;
+    border: none;
+    color: white;
+    display: block; 
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    padding: 10px;    
+    width: 100%;
+}
+
+input#hae_ilmoituksia_nappi_2 {
+    background: #27b6e4;
+    border: none;
+    color: white;
+    display: block; 
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    padding: 10px;    
+    width: 100%;
+}
+
+input#hae_ilmoituksia_nappi:focus {
+    outline: none;
+}
+
+input#hae_ilmoituksia_nappi_2:focus {
+    outline: none;
+}
+
+input#hae_ilmoituksia_nappi:hover {
+    background: #70d2ff;
+    cursor: pointer;
+}
+
+input#hae_ilmoituksia_nappi_2:hover {
+    background: #70d2ff;
+    cursor: pointer;
+}
+
+input#haku_sana_haku {
+    border: 1px solid #284e07;
+    color: #284e07;
+    display: block;
+    font-size: 11px;
+    margin-bottom: 20px;
+    
+    outline: none;
+    padding: 12px 20px;
+    width: 100%; 
+}
+
+input#haku_sana_haku_2 {
+    border: 1px solid #284e07;
+    color: #284e07;
+    display: block;
+    font-size: 11px;
+    margin-bottom: 20px;
+    
+    outline: none;
+    padding: 12px 20px;
+    width: 100%; 
+}
+
+img.listaus_kuva {
+    height: 67px;
+    width: 100px;
+}
+
+p.katoava_iso {
+    display: none;
+}
+
+p#listaus_kaupunki_p {
+   margin-bottom: 5px;
+}
+
+p#listaus_osasto_p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+p#listaus_paikka_p {
+    
+}
+
+p#etusivun_info_pieni {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+span#listaus_ankkuri {
+}
+
+table#ilmoitusten_listaus {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;   
+}
+
+table#ilmoitusten_listaus_tapahtumat {
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+td a#listaus_kaupunki {
+    color: #284e07;
+    font-size: 11px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+td a#listaus_otsikko {
+    color: #284e07;
+    font-size: 11px;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+td a#listaus_viikon_paiva_suomeksi {
+    color: #284e07;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+td a#listaus_tapahtuma_alkaa {
+    color: #284e07;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+td a#listaus_klo_I {
+    color: #284e07;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+td a#listaus_ilmoitus_lisatty {
+    color: #284e07;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+td a#listaus_osasto {
+    color: #284e07;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+td a#listaus_paikka {
+    color: #284e07;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+td a.listaus_linkin_teksti {
+    color: #284e07;
+    text-decoration: none;
+}
+
+td.listaus_solu {
+    border-bottom: 1px solid #284e07;
+    padding: 10px;
+    vertical-align: bottom;
+}
+
+td.paivays_katoaa {
+    display: none;
+}
+
+tr.listaus_rivi {
+    cursor: pointer;
+}
+
+tr.listaus_rivi_hallinnointi {
+    
+}
+
+ul#pagination_koko_lista {
+    display: inline-block;
+}
+
+ul#pagination_koko_lista li.pagination_lista {
+    display: inline;
+}
+
+ul#pagination_koko_lista li.pagination_lista a.pagination {
+    border: 1px solid #284e07;
+    border-radius: 2px;
+    color: #284e07;
+    margin-right: 5px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+ul#pagination_koko_lista li.pagination_lista a#active {
+    background: #284e07;
+    color: white;
+}
+
+select.haku_valikot {
+    background: #096c78;
+    border: none;
+    color: white;
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 10px; 
+    text-align: center;   
+    text-align-last:center; 
+    width: 49%;
+}
+
+select.haku_valikot:focus {
+    outline: none;
+}
+
+select.haku_valikot:hover {
+    cursor: pointer;    
+}
+
+select#haku_kaupungit {
+    margin-right: 2%;
+}
+
+
+@media only screen and (min-width: 390px) {
+
+div.haku_osastot_checkbox_I {
+    float: left;
+    height: 104px;
+    width: 50%;
+}
+
+div.haku_osastot_checkbox_II {
+    float: left;
+    height: 104px;
+    margin-left: 2%;
+    margin-top: 0;
+    width: 48%;
+}
+
+div.haku_osastot_checkbox_III {
+    float: left;
+    height: 104px;
+    width: 50%;
+}
+
+div.haku_osastot_checkbox_IV {
+    float: left;
+    height: 104px;
+    margin-left: 2%;
+    width: 48%;
+}
+
+div.haku_osastot_checkbox_IV_II {
+    float: left;
+    height: 104px;
+    width: 50%;
+}
+
+div.haku_osastot_checkbox_V {
+    float: left;
+    height: 104px;
+    margin-left: 2%;
+    width: 48%;
+}
+
+
+div.kolmen_rivi_checkboxit_1 {
+    width: 100%;
+}
+
+div.kolmen_rivi_checkboxit_2 {
+    width: 100%;
+}
+
+div.kolmen_rivi_checkboxit_3 {
+    width: 100%;
+}
+
+}
+
+
+@media only screen and (min-width: 530px) {
+
+img.listaus_kuva {
+    height: 75px;
+    width: 112.5px;
+}
+
+p.paivays_katoaa_pieni {
+    display: none;
+}
+
+td.paivays_katoaa {
+    display: table-cell;
+}
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+div.haku_osastot_checkbox_I {
+    float: none;   
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_II {
+    float: none;  
+    margin-left: 0;
+    margin-right: 20px; 
+    margin-top: 20px;
+    width: 100%; 
+}
+
+div.haku_osastot_checkbox_III {
+    float: none;   
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IV {
+    float: none;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 20px; 
+    margin-top: 20px;  
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IV_II {
+    float: none;  
+    margin-right: 20px; 
+    margin-top: 20px;  
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_V {
+    float: none;  
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_VI {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_VII {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_VIII {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IX {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IX_II {
+    float: left;  
+    margin-bottom: 0px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IX_III {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_X {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XI {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XII {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XIII {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XIV {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XIV_II {
+    float: left;  
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XIV_III {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_XV {
+    float: left;  
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.kolmen_rivi_checkboxit_1 {
+    float: left;
+    width: 33.3%;
+}
+
+div.kolmen_rivi_checkboxit_2 {
+    float: left;
+    width: 33.3%;
+}
+
+div.kolmen_rivi_checkboxit_3 {
+    float: left;
+    width: 33.3%;
+}
+
+div.kaikki_checkboxit {
+    font-size: 13px;
+}
+
+div#pagination_lohko {
+    font-size: 15px;
+}
+
+input#hae_ilmoituksia_nappi {
+    background: #27b6e4;
+    clear: both;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 13px 8px; 
+    width: 40%;
+}
+
+input#hae_ilmoituksia_nappi_2 {
+    background: #27b6e4;
+    clear: both;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 13px 8px; 
+    width: 40%;
+}
+
+input#haku_sana_haku {
+    border: 1px solid #284e07;
+    clear: both;
+    color: #284e07;
+    font-size: 13px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    outline: none;
+    padding: 12px 20px;
+    width: 40%; 
+}
+
+input#haku_sana_haku_2 {
+    border: 1px solid #284e07;
+    clear: both;
+    color: #284e07;
+    font-size: 13px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    outline: none;
+    padding: 12px 20px;
+    width: 40%; 
+}
+
+input.vali_piilo {
+    visibility: hidden;
+}
+
+img.listaus_kuva {
+    height: 100px;
+    width: 150px;
+}
+
+p#etusivun_info_pieni {
+    display: none;    
+}
+
+p.katoava_iso {
+    display: block;    
+}
+
+p.katoava_pieni {
+    display: none;    
+} 
+
+p.paivays_katoaa_pieni {
+    display: none;
+}
+
+select#haku_kaupungit {
+    margin-right: 2%;
+}
+
+select#haku_osastot {
+    
+}
+
+td.listaus_solu {
+    vertical-align: bottom;
+}
+
+td#listaus_solu_otsikko_I {
+    width: 45%;
+}
+
+td#listaus_solu_otsikko_II {
+    width: 45%;
+}
+
+td.paivays_katoaa {
+    display: table-cell;
+}
+
+td a#listaus_kaupunki {
+    color: #284e07;
+    font-size: 13px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+td a#listaus_otsikko {
+    color: #284e07;
+    font-size: 13px;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+td a#listaus_viikon_paiva_suomeksi {
+    color: #284e07;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+td a#listaus_tapahtuma_alkaa {
+    color: #284e07;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+td a#listaus_klo_I {
+    color: #284e07;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+td a#listaus_ilmoitus_lisatty {
+    color: #284e07;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+td a#listaus_osasto {
+    color: #284e07;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+td a#listaus_paikka {
+    color: #284e07;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+select.haku_valikot {
+    background: white; 
+    border: 1px solid #284e07;
+    color: #284e07;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    padding: 7px 4px;
+    width: 49%;
+}  
+
+select.haku_valikot:focus {
+    cursor: pointer;    
+}
+
+select.haku_valikot:hover {
+    cursor: pointer;    
+}
+
+}
+
+
+@media only screen and (min-width: 950px) {
+
+div.kolmen_rivi_checkboxit_1 {
+     width: 25%;
+}
+
+div.kolmen_rivi_checkboxit_2 {
+     width: 25%;
+}
+
+div.kolmen_rivi_checkboxit_3 {
+     width: 50%;
+}
+
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+div.kolmen_rivi_checkboxit_1 {
+     width: 20%;
+}
+
+div.kolmen_rivi_checkboxit_2 {
+     width: 20%;
+}
+
+div.kolmen_rivi_checkboxit_3 {
+     width: 60%;
+}
+
+p.etu_vasen {
+    width: 50%;
+}
+
+select.poikkeus_1 {
+    width: 24%;
+}
+
+select.poikkeus_2 {
+    width: 24%;
+}
+
+
+}
+
+@media only screen and (min-width: 1350px) {
+
+div.kolmen_rivi_checkboxit_1 {
+     width: 16.66%;
+}
+
+div.kolmen_rivi_checkboxit_2 {
+     width: 16.66%;
+}
+
+div.kolmen_rivi_checkboxit_3 {
+     width: 66,68%;
+}
+
+input#hae_ilmoituksia_nappi {
+    width: 16.66%;
+}
+
+
+input#haku_sana_haku {
+    width: 16.66%;
+}
+
+
+}
+
+
+
+@media only screen and (min-width: 1550px) {
+
+div.haku_osastot_checkbox_I {
+    float: left;
+    width: 170px;
+}
+
+div.haku_osastot_checkbox_II {
+    float: left;
+    width: 170px;
+}
+
+div.haku_osastot_checkbox_III {
+    float: left;
+    width: 170px;
+}
+
+div.haku_osastot_checkbox_IV {
+    float: left;
+    width: 170px;
+}
+
+div.haku_osastot_checkbox_IV_II {
+    float: left;
+    width: 170px;
+}
+
+div.haku_osastot_checkbox_V {
+    float: left;
+    margin-bottom: 20px;
+    width: 170px;
+}
+
+div.kolmen_rivi_checkboxit_1 {
+     width: initial;
+}
+
+div.kolmen_rivi_checkboxit_2 {
+     width: initial;
+}
+
+div.kolmen_rivi_checkboxit_3 {
+     width: initial;
+}
+
+input#hae_ilmoituksia_nappi {
+    width: 40%;
+}
+
+input#haku_sana_haku {
+    width: 40%
+}
+
+p.etu_vasen {
+    width: initial;
+}
+
+select.poikkeus_1 {
+    float: left;
+    width: 49%;
+}
+
+select.poikkeus_2 {
+    float: left;
+    width: 49%;
+}
+
+
+}
+
+
+@media only screen and (min-width: 2475px) {
+
+
+input#hae_ilmoituksia_nappi {
+    width: 16.66%;
+}
+
+input#haku_sana_haku {
+    width: 16.66%;
+}
+
+p.etu_vasen {
+    width: 50%;
+}
+
+select.poikkeus_1 {
+    width: 24%;
+}
+
+select.poikkeus_2 {
+    width: 24%;
+}
+
+
+}
+
+
+/*
+-------------------------------------
+
+Etusivun muotoilu loppuu.
+
+-------------------------------------
+
+
+-------------------------------------
+
+Lisää ilmoitus ja muokkaa tai poista
+-sivujen muotoilu alkaa.
+
+-------------------------------------
+*/
+
+
+div.haku_osastot_checkbox_I_l {
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_II_l {
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_III_l {
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IV_l {
+    margin-top: 20px;  
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_V_l {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IX_l {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+} 
+
+div.haku_osastot_checkbox_IX_II_l {
+    margin-top: 20px; 
+    width: 100%;
+} 
+
+div.haku_osastot_checkbox_IX_III_l {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%; 
+} 
+
+div.haku_osastot_checkbox_XIV_l { 
+    margin-bottom: 20px;
+    margin-top: 20px; 
+} 
+
+div.haku_osastot_checkbox_XIV_II_l {
+    margin-top: 20px; 
+}
+
+div.haku_osastot_checkbox_XIV_III_l {
+    margin-bottom: 20px;
+    margin-top: 20px; 
+}
+
+
+div#lisaa_ilmoitus_avoinna {
+    display: none;
+}
+
+div#tapahtuma_kalenterit {
+    display: none;
+}
+
+h1.lisaa_ilmoitus_otsikko {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+input.lisaa_ilmoitus_lomake {
+    border: 1px solid #284e07;
+    clear: both;
+    color: #284e07;
+    font-size: 13px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    outline: none;
+    padding: 12px 20px;
+    width: 100%; 
+}
+
+input.vaihda_kuva_lomake {
+    border: 1px solid #284e07;    
+    color: #3c7809;
+    padding: 5px;
+}
+
+input#lisaa_ilmoitus_nappi {
+    background: #3c7809;
+    border: none;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    color: white;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 12px 20px; 
+    width: 100%;
+}
+
+input#lisaa_ilmoitus_nappi:hover {
+    background: #71c516;
+    cursor: pointer;
+}
+
+input#muokkaa_ilmoitusta_nappi {
+    background: #3c7809;
+    border: none;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    color: white;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 12px 20px; 
+    width: 100%;
+}
+
+input.vaihda_kuva_nappi {
+    background: #3c7809;
+    color: white;
+    padding: 5px;
+}
+
+input.vaihda_kuva_nappi:hover {
+    background: #71c516;
+    cursor: pointer; 
+}
+
+input#muokkaa_ilmoitusta_nappi:hover {
+    background: #71c516;
+    cursor: pointer;
+}
+
+input#poista_ilmoitus_nappi {
+    background: #3c7809;
+    border: none;
+    color: white;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    outline: none;
+    padding: 12px 20px; 
+    width: 40%;
+}
+
+input#poista_ilmoitus_nappi:hover {
+    background: #71c516; 
+    cursor: pointer;
+}
+
+input#poista_ilmoitus_nappi_2 {
+    background: red;
+    border: none;
+    color: white;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    outline: none;
+    padding: 12px 20px; 
+    width: 100%;
+}
+
+input#poista_ilmoitus_nappi_2:hover {
+    background: #ff6666;
+    cursor: pointer;
+}
+
+
+input.poista_kuva_nappi {
+    background: red;
+    color: white;
+    padding: 5px;
+}
+
+input.poista_kuva_nappi:hover {
+    background: #ff6666;
+    cursor: pointer;
+}
+
+label.label_otsikko {
+    font-size: 13px;
+    font-weight: bold;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+}
+
+p.lisaa_ilmoitus_alaohje {
+    font-size: 11px;
+}
+
+p.lomakkeenPalauteNegatiivinen {
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 25px; 
+    width: 100%;
+}
+
+p.lomakkeenPalauteNegatiivinen2 {
+    background: #27b6e4;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 25px; 
+    width: 100%;
+}
+
+p.lomakkeenPalauteNegatiivinen_3 {
+    color: #3c7809;
+    font-size: 11px;
+
+    width: 100%;
+}
+
+
+p.lomakkeenPalautePositiivinen {
+    background: rgb(0, 230, 0);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 25px; 
+    width: 100%;
+}
+
+p.varmistus_kysymys_1 {
+    color: red;   
+    margin-left: 5%;
+    margin-bottom: 5px;
+}
+
+p.varmistus_kysymys_2 {
+    margin-bottom: 5px;
+}
+
+select.lisaa_ilmoitus_valikko {
+    border: 1px solid #284e07;
+    color: #284e07;
+    font-size: 13px; 
+    margin-bottom: 30px;
+    margin-top: 10px;
+    outline: none;
+    padding: 12px 20px;    
+    width: 100%;
+}
+
+span.lomakkeenPalauteNegatiivinen {
+    background: red;
+    color: white;
+    font-weight: bold;
+}
+
+span.varoitus_teksti {
+    color: red;
+}
+
+textarea.lisaa_ilmoitus_textarea {
+    border: 1px solid #284e07;
+    color: #284e07;
+    font-size: 11px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    outline: none;
+    padding: 12px 20px;
+    width: 100%; 
+} 
+
+
+@media only screen and (min-width: 320px) {
+
+div.haku_osastot_checkbox_I_l {
+    float: left;
+    height: 104px;
+    width: 49%;
+}
+
+div.haku_osastot_checkbox_II_l {
+    float: left;
+    height: 104px;
+    margin-left: 2%;
+    width: 49%;
+}
+
+div.haku_osastot_checkbox_III_l {
+    float: left;
+    height: 104px;
+    width: 49%;
+}
+
+div.haku_osastot_checkbox_IV_l {
+    float: left;
+    height: 104px;
+    margin-left: 2%;
+    width: 49%;
+}
+
+div.haku_osastot_checkbox_V_l {
+    float: left;
+    height: 104px;
+    width: 49%;
+}
+
+
+div.kolmen_rivi_checkboxit_1_l {
+    width: 100%;
+}
+
+div.kolmen_rivi_checkboxit_2_l {
+    width: 100%;
+}
+
+div.kolmen_rivi_checkboxit_3_l {
+    width: 100%;
+}
+
+
+}
+
+@media only screen and (min-width: 470px) {
+    
+br.br_muokkaa_katoaa {
+    display: none;    
+}
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+
+div.haku_osastot_checkbox_I_l {
+    float: none;   
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_II_l {
+    float: none;  
+    margin-left: 0;
+    margin-right: 20px; 
+    margin-top: 20px;
+    width: 100%; 
+}
+
+div.haku_osastot_checkbox_III_l {
+    float: none;   
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IV_l {
+    float: none;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 20px; 
+    margin-top: 20px;  
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_V_l {
+    float: none;  
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+div.haku_osastot_checkbox_IX_l {
+    float: left;  
+    margin-bottom: 20px; 
+    margin-top: 20px; 
+    width: 150px;
+} 
+
+
+div.haku_osastot_checkbox_IX_II_l {
+    float: left;  
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 150px; 
+} 
+
+div.haku_osastot_checkbox_IX_III_l {
+    float: left;  
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 150px; 
+} 
+
+div.haku_osastot_checkbox_XIV_l {
+    float: left;  
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 150px; 
+} 
+
+
+div.haku_osastot_checkbox_XIV_II_l {
+    float: left;  
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 150px;
+} 
+
+div.haku_osastot_checkbox_XIV_II_l {
+    float: left;  
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    width: 150px;
+}
+
+div.kolmen_rivi_checkboxit_1_l {
+    float: left;
+    width: 33.3%;
+}
+
+div.kolmen_rivi_checkboxit_2_l {
+    float: left;
+    width: 33.3%;
+}
+
+div.kolmen_rivi_checkboxit_3_l {
+    float: left;
+    width: 33.3%;
+}
+
+h1.lisaa_ilmoitus_otsikko {
+    font-size: 16px;
+}
+
+label.label_otsikko {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+p.lisaa_ilmoitus_alaohje {
+    font-size: 13px;
+}
+
+p.lomakkeenPalauteNegatiivinen { 
+    width: 50%;
+}
+
+p.lomakkeenPalauteNegatiivinen2 {
+    font-size: 13px;
+}
+
+p.lomakkeenPalauteNegatiivinen_3 {
+    font-size: 13px;
+}
+
+p.lomakkeenPalautePositiivinen {
+    width: 50%;
+}
+
+select.lisaa_ilmoitus_valikko {
+    font-size: 13px; 
+}
+
+textarea.lisaa_ilmoitus_textarea {
+    font-size: 13px;
+}
+
+}
+
+@media only screen and (min-width: 950px) {
+
+div.kolmen_rivi_checkboxit_1_l {
+     width: 25%;
+}
+
+div.kolmen_rivi_checkboxit_2_l {
+     width: 25%;
+}
+
+div.kolmen_rivi_checkboxit_3_l {
+     width: 50%;
+}
+
+
+}
+
+
+@media only screen and (min-width: 1250px) {
+
+div.kolmen_rivi_checkboxit_1_l {
+     width: 20%;
+}
+
+div.kolmen_rivi_checkboxit_2_l {
+     width: 20%;
+}
+
+div.kolmen_rivi_checkboxit_3_l {
+     width: 60%;
+}
+
+
+}
+
+
+
+@media only screen and (min-width: 1300px) {
+
+
+div.haku_osastot_checkbox_I_l {
+    float: left;
+    width: 170px;
+}
+
+div.haku_osastot_checkbox_II_l {
+    float: left;
+    width: 170px;
+}
+
+div.haku_osastot_checkbox_III_l {
+    float: left;
+    width: 170px;
+}
+
+div.haku_osastot_checkbox_IV_l {
+    float: left;
+    width: 170px;
+}
+
+div.haku_osastot_checkbox_V_l {
+    float: left;
+    margin-bottom: 20px;
+    width: 170px;
+}
+
+div.kolmen_rivi_checkboxit_1_l {
+     width: initial;
+}
+
+div.kolmen_rivi_checkboxit_2_l {
+     width: initial;
+}
+
+div.kolmen_rivi_checkboxit_3_l {
+     width: initial;
+}
+
+
+}
+
+
+
+/*
+-------------------------------------
+
+Lisää ilmoitus ja muokkaa tai poista
+-sivujen muotoilu loppuu.
+
+-------------------------------------
+
+
+-------------------------------------
+
+Koko ilmoitus -sivun muotoilu alkaa.
+
+-------------------------------------
+*/
+
+
+a.koko_ilmoitus_linkki {
+
+}
+
+br#koko_ilmoitus_br_katoaa {
+    display: none;
+}
+
+div.fb-share-button {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+div#koko_ilmoitus_apk {
+    display: none;
+}
+
+div#map {
+    height: 300px;
+    margin: 0; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+div.oikea_puoli {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+
+div.vasen_puoli {
+   
+    float: left;
+    width: 100%;
+}
+
+h1.koko_ilmoitus_otsikko {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+h2.koko_ilmoitus_otsikko {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+img.koko_ilmoitus_iso_kuva { 
+    display: none;
+    height: auto;
+    width: 100%;    
+}
+
+img.koko_ilmoitus_pieni_kuva {
+    cursor:pointer;
+    display: none;
+    height: auto;
+    width: 24.1%;
+}
+
+p.koko_ilmoitus_teksti {
+    font-size: 12px;
+}
+
+p.koko_ilmoitus_sisalto {
+    white-space:pre-line;    
+}
+
+span#koko_ilmoitus_tasaus {
+    visibility: hidden;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+div#map {
+    height: 320px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 77px;
+    width: 60%;
+}
+
+div.oikea_puoli {
+    width: 50%;
+}
+
+div.vasen_puoli {
+    width: 50%;
+}
+
+h1.koko_ilmoitus_otsikko {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+h2.koko_ilmoitus_otsikko {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+p.koko_ilmoitus_teksti {
+    font-size: 13px;
+}
+
+}
+
+/*
+-------------------------------------
+
+Koko ilmoitus -sivun muotoilu loppuu.
+
+-------------------------------------
+
+
+-------------------------------------
+
+Info, ukk, turvallisuustietoa, 
+yhteistyössä ja yhteys -sivujen 
+muotoilu alkaa.
+
+-------------------------------------
+*/
+
+
+a.info_linkki {
+    color: #27b6e4;
+    text-decoration: none;
+}
+
+a.info_linkki_2 {
+    color: #3c7809;
+    text-decoration: none;
+}
+
+div.keski_osa {
+    background: white;
+    color: #284e07;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    width: 100%;
+}  
+
+div.keski_osa_2 {
+    background: white;
+    color: #284e07;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+div.noscript {
+    display: none;
+}
+
+noscript {
+    color: red;
+}
+
+div.middle_part {
+    background: white;
+    color: #284e07;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    width: 100%;
+}  
+
+div.middle_part_2 {
+    background: white;
+    color: #284e07;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+div#ukk_vastaus_1 {
+    color: #27b6e4;
+    display: none;
+}
+
+div#ukk_vastaus_2 {
+    color: #27b6e4;
+    display: none;
+}
+
+div#ukk_vastaus_3 {
+    color: #27b6e4;
+    display: none;
+}
+
+div#ukk_vastaus_4 {
+    color: #27b6e4;
+    display: none;
+}
+
+div#ukk_vastaus_5 {
+    color: #27b6e4;
+    display: none;
+}
+
+div#ukk_vastaus_6 {
+    color: #27b6e4;
+    display: none;
+}
+
+div#ukk_vastaus_7 {
+    color: #27b6e4;
+    display: none;
+}
+
+h1.info_otsikko {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+h2.info_ala_otsikko {
+    font-size: 12px;
+}
+
+h3.info_ala_ala_otsikko {
+    font-size: 11px;
+}
+
+input#laheta_viesti_ilmoittajalle_nappi {
+    background: #3c7809;
+    border: none;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    color: white;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 12px 20px; 
+    width: 100%;    
+}
+
+input#laheta_viesti_ilmoittajalle_nappi:hover {
+    background: #71c516;
+    cursor: pointer;
+}
+
+input.yhteydenottolomake {
+    border: 1px solid #284e07;
+    color: #284e07;
+    font-size: 11px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    outline: none;
+    padding: 12px 20px;
+    width: 100%; 
+}
+
+p.info_teksti {
+    font-size: 11px;
+}
+
+p.info_teksti_2 {
+
+    font-size: 11px;
+}
+
+a.luotu_linkki  {
+    color: #27b6e4;
+    word-break: break-all;  
+}
+
+p.nettisivu_katoaa {
+    display: none;
+    word-break: break-all;
+}
+
+p.nettisivu_katoaa a {
+    color: #27b6e4;
+}
+
+p#puhelin_katoaa {
+    display: none;
+}
+
+p#ukk_kysymys_1 {
+    cursor: pointer;
+}
+
+p#ukk_kysymys_2 {
+    cursor: pointer;
+}
+
+p#ukk_kysymys_3 {
+    cursor: pointer;
+}
+
+p#ukk_kysymys_4 {
+    cursor: pointer;
+}
+
+p#ukk_kysymys_5 {
+    cursor: pointer;
+}
+
+p#ukk_kysymys_6 {
+    cursor: pointer;
+}
+
+p#ukk_kysymys_6 {
+    cursor: pointer;
+}
+
+p#ukk_kysymys_7 {
+    cursor: pointer;
+}
+
+p#yhteys_antti {
+    width: 30%;
+}
+
+p#yhteys_markus {
+    width: 30%;
+}
+
+p#yhteys_marko {
+    width: 30%;
+}
+
+p#yhteys_juuso {
+    width: 30%;
+}
+
+select.yhteydenottolomake_valikko {
+    border: 1px solid #284e07;
+    color: #284e07;
+    font-size: 11px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    outline: none;
+    padding: 12px 20px;
+    width: 100%;
+}
+
+textarea.yhteydenottolomake {
+    border: 1px solid #284e07;
+    color: #284e07;
+    font-size: 11px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    outline: none;
+    padding: 12px 20px;
+    width: 100%; 
+}
+
+ul.info_lista {
+    font-size: 11px;
+    margin-left: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+
+div.keski_osa {
+    float: right;
+    margin-bottom: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 25px;
+    min-height: 492px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 80%;
+}  
+
+div.keski_osa_2 {
+    float: right;
+    margin-bottom: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 25px;
+    min-height: 492px;
+    padding-left: 30px;
+    padding-right: 0;
+    width: 80%;
+}  
+
+div.middle_part {
+    float: right;
+    margin-bottom: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 25px;
+    min-height: 492px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 80%;
+}  
+
+div.middle_part_2 {
+    float: right;
+    margin-bottom: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 25px;
+    min-height: 492px;
+    padding-left: 30px;
+    padding-right: 0;
+    width: 80%;
+} 
+
+h1.info_otsikko {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+h2.ala_otsikko {
+    font-size: 14px;
+}
+
+h3.info_ala_ala_otsikko {
+font-size: 13px;
+}
+
+input.yhteydenottolomake {
+    font-size: 13px;
+}
+
+p.info_teksti {
+    font-size: 13px;
+}
+
+p.info_teksti_2 {
+    font-size: 13px;
+}
+
+select.yhteydenottolomake_valikko {
+    font-size: 13px;
+}
+
+textarea.yhteydenottolomake {
+    font-size: 13px;
+}
+
+ul.info_lista {
+    font-size: 13px;
+}
+
+
+}
+
+/*
+-------------------------------------
+
+Info, ukk, turvallisuustietoa, 
+yhteistyössä ja yhteys -sivujen 
+muotoilu loppuu.
+
+-------------------------------------
+
+
+-------------------------------------------------------------------
+
+Toinen pääosa loppuu.
+
+-------------------------------------------------------------------
+*/ 
+
+
+
+
+/*
+-------------------------------------------------------------------
+
+Kolmas pääosa alkaa.
+
+-------------------------------------------------------------------
+
+
+-------------------------------------
+
+Hallinnoinnin muotoilu alkaa.
+
+-------------------------------------
+*/
+
+a.info_linkki_feedback {
+    color: white;
+    text-decoration: underline;
+}
+
+button#button {
+    background: grey;
+    border: none;
+    clear: both;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+button#button:hover {
+    cursor: pointer;
+}
+
+
+button#button_2 {
+    background: #3c7809;
+    border: none;
+    clear: both;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+button#button_2:hover {
+    cursor: pointer;
+}
+
+button#button_3 {
+    background: red;
+    border: none;
+    color: white;
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 1%;
+    outline: none;
+    padding: 13px 8px; 
+    width: 19%;    
+}
+
+button#button_3:hover {
+    cursor: pointer;
+}
+
+button#button_4 {
+    background: red;
+    border: none;
+    color: white;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+    outline: none;
+    padding: 13px 8px; 
+    width: 100%;    
+}
+
+button#button_4:hover {
+    background: #ff6666;
+    cursor: pointer;
+}
+
+button#button_5 {
+    background: red;
+    border: none;
+    color: white;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-right: 5%;
+    outline: none;
+    padding: 12px 20px; 
+    width: 40%;
+
+}
+
+button#button_5:hover {
+    background: #ff6666;
+    cursor: pointer;
+}
+
+button#button_5:focus {
+    outline: none; 
+}
+
+button#button_6 {
+    background: #3c7809;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    padding: 5px 5px; 
+    width: 75%;    
+}
+
+button#button_6:hover {
+    background: #71c516;
+    cursor: pointer;
+}
+
+button#vaihda_ja_poista_kuvia_linkki {
+    background: #27b6e4;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;   
+}
+
+button#vaihda_ja_poista_kuvia_linkki:hover {
+    background: #70d2ff;
+}
+
+div#haku_osastot_tapahtumat_fb {
+    float: left;
+    width: 100%;
+}
+
+div#julkaise_varmistus {
+    display: none;
+}
+
+div#tyhjaa_varmistus {
+    display: none;
+}
+
+input.delete_fb_event {
+    background: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    padding: 5px 5px; 
+    width: 19%;
+}
+
+input.delete_fb_event:hover {
+    background: #ff6666;
+    cursor: pointer;
+}
+
+input#fb_event_url {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+}
+
+
+input#h_julkaise {
+    background: #3c7809;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    float:left;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+input#julkaise_fb_ilmoitukset_nappi {
+    background: #3c7809;
+    border: none;
+    color: white;
+    cursor: pointer;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 13px 8px; 
+    width: 100%;    
+}
+
+input#julkaise_fb_ilmoitukset_nappi:hover {
+    background: #71c516;
+    cursor: pointer;   
+}
+
+input#h_poista {
+    background: red;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-top: 10px;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+input#h_julkaise_listaus {
+    background: #3c7809;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 13px 8px; 
+    width: 100%;    
+}
+
+input#h_poista_listaus {
+    background: red;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 100%;    
+}
+
+input#hae_l_e_tapahtumat_nappi_1 {
+    background: #27b6e4;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+input#hae_l_e_tapahtumat_nappi_2 {
+    background: #27b6e4;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+input#hae_l_e_tapahtumat_nappi_3 {
+    background: #27b6e4;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+input#hae_l_e_tapahtumat_nappi_4 {
+    background: #27b6e4;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+input#hae_l_e_tapahtumat_nappi_5 {
+    background: #27b6e4;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+input#muokkaa_l_e_ajat {
+    background: #27b6e4;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+input#listaa_l_e_ilmoitukset_nappi {
+    background: rgb(255, 187, 0);
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;   
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+input#julkaise_l_e_ilmoitukset_nappi {
+    background: #3c7809;
+    border: none;
+    color: white;
+    cursor: pointer;
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+    margin-right: 1%;
+    outline: none;
+    padding: 13px 8px; 
+    width: 19%;    
+}
+
+input#julkaise_l_e_ilmoitukset_nappi:hover {
+    background: #71c516;
+    cursor: pointer;   
+}
+
+input#tyhjenna_testi_taulut {
+    background: #27b6e4;
+    border: none;
+    clear: both;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 15px;
+    font-weight: normal;
+    outline: none;
+    padding: 13px 8px; 
+    width: 40%;    
+}
+
+li.etusivu_lista_2 {
+    background: #27b6e4;
+    border-bottom: none;
+    border-top: none; 
+    float: left;
+    font-size: 14px;
+    list-style-type: none;
+    margin-top: 5px;
+    padding: 8px;
+    text-align: center;
+}
+
+li.etusivu_lista_2:hover {
+    background: #70d2ff;
+}
+
+li#lisaa_ilmoitus_lista_2 {
+    background: #3c7809;
+    border-top: none;   
+    font-size: 14px;
+    float: left;
+    list-style-type: none;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    padding: 8px;
+    text-align: center;
+}
+
+li#lisaa_ilmoitus_lista_2:hover {
+background: #71c516;
+}
+
+span#listaus_ankkuri_2 {
+    font-size: 20px;
+    visibility: hidden;
+}
+
+ul a#etusivu_linkki_2 {
+    color: white;   
+    display: inline-block;
+    float: left;
+    margin-left: 5%;
+    text-decoration: none;
+} 
+
+ul a#linked_events_linkki {
+    color: white;   
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+} 
+
+ul a#lisaa_ilmoitus_linkki_2 {
+    color: white;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+}
+
+
+
+/*
+-------------------------------------
+
+Hallinnoinnin muotoilu loppuu.
+
+-------------------------------------
+
+
+-------------------------------------------------------------------
+
+Kolmas pääosa loppuu.
+
+-------------------------------------------------------------------
+*/
