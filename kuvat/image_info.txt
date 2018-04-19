@@ -1,5 +1,8 @@
 This is info, not code.
 
+This folder is image folder.
+There is no code or text here in the real server.
+
 In this folder there are these images:
 
 Logo:
