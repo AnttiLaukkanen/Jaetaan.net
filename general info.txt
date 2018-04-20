@@ -10,7 +10,13 @@ I had never coded before.
 In  two years and three months I learnt something
 but there is still left some code that is not so good.
 
-It all works well and it is sometimes rather easy to read too 
+Now I would make it all in English and I would use Finnish only 
+when needed for finnish end users so that the code would benefit 
+anybody anywhere in the world.
+
+Now it's partly in Finnish Partly in English.
+
+All the works well and it is sometimes rather easy to read too 
 but it's not always so clean and neat, 
 not always as easy to read as it could be.
 
