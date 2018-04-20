@@ -14,7 +14,7 @@ Now I would make it all in English and I would use Finnish only
 when needed for finnish end users so that the code would benefit 
 anybody anywhere in the world.
 
-Now it's partly in Finnish Partly in English.
+Now it's partly in Finnish partly in English.
 
 All the works well and it is sometimes rather easy to read too 
 but it's not always so clean and neat, 
@@ -29,5 +29,5 @@ No technical, no content, no user finder.
 
 It is waiting for someone to come and take it further.
 
-If you think you can take over and take it further, please contact
-antti.laukkanen(at)gmail.com
+If you think you or your group can take over and take it further, please contact
+antti.laukkanen(at)gmail.com.
