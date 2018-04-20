@@ -11,12 +11,17 @@ In  two years and three months I learnt something
 but there is still left some code that is not so good.
 
 Now I would make it all in English and I would use Finnish only 
-when needed for finnish end users so that the code would benefit 
+when needed for finnish end users so that the code would better benefit 
 anybody anywhere in the world.
+
+At first I wrote everthing in Finnish so that it was easier for me to understand
+this unknown new world of code.
+
+Later I started to write in English as I started to understand the code better.
 
 Now it's partly in Finnish partly in English.
 
-All the works well and it is sometimes rather easy to read too 
+All the code works well and it is sometimes rather easy to read too 
 but it's not always so clean and neat, 
 not always as easy to read as it could be.
 
